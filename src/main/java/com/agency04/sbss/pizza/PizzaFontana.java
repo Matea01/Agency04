@@ -1,6 +1,6 @@
 package com.agency04.sbss.pizza;
 
-public class PizzaFontana implements PizzaInt{
+public class PizzaFontana extends Pizza implements PizzaInt{
     @Override
     public String getName() {
         return "Pizza Fontana";

@@ -4,20 +4,15 @@ public class PizzaApp {
 
     public static void main(String[] args) {
         // Add some pizza code
-        PizzaInt PizzaDiavlola = new PizzaDiavola();
+        Pizza Diavola = new PizzaDiavola();
 
-        PizzaInt PizzaFontana= new PizzaFontana();
+        Pizza Fontana= new PizzaFontana();
 
-        PizzaInt PizzaSchiacciata= new PizzaSchiacciata();
+        Pizza Schiacciata = new PizzaSchiacciata();
 
-        System.out.println(PizzaDiavlola.getName());
-        System.out.println(PizzaDiavlola.getIngredients());
-
-        System.out.println(PizzaFontana.getName());
-        System.out.println(PizzaFontana.getIngredients());
-
-        System.out.println(PizzaSchiacciata.getName());
-        System.out.println(PizzaSchiacciata.getIngredients());
+        System.out.println(Diavola.getName()+":\t sastojci pizze:" +Diavola.getIngredients());
+        System.out.println(Fontana.getName()+ ":\t sastojci pizze:"+Fontana.getIngredients());
+        System.out.println(Schiacciata.getName()+ ":\t sastojci pizze:"+ Schiacciata.getIngredients());
 
 
     }
