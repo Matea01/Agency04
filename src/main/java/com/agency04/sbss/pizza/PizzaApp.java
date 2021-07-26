@@ -1,19 +1,20 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class PizzaApp {
 
     public static void main(String[] args) {
+
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
+        Pizza thePizza = context.getBean("myPizza", Pizza.class);
+
+        System.out.println(thePizza.getName());
+        System.out.println(thePizza.getIngredients());
+        System.out.println(thePizza.getDailyPizza());
+
+        context.close();
         // Add some pizza code
-        Pizza Diavola = new PizzaDiavola();
-
-        Pizza Fontana= new PizzaFontana();
-
-        Pizza Schiacciata = new PizzaSchiacciata();
-
-        System.out.println(Diavola.getName()+":\t sastojci pizze:" +Diavola.getIngredients());
-        System.out.println(Fontana.getName()+ ":\t sastojci pizze:"+Fontana.getIngredients());
-        System.out.println(Schiacciata.getName()+ ":\t sastojci pizze:"+ Schiacciata.getIngredients());
-
 
     }
 

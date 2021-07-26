@@ -8,5 +8,8 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your Beans here -->
-
+    <bean id="myPizzaDelivery" class="com.agency04.sbss.pizza.PizzaDeliveryServiceImpl">    </bean>
+    <bean id="myPizza" class="com.agency04.sbss.pizza.PizzaCheese">
+        <constructor-arg ref="myPizzaDelivery"></constructor-arg>
+    </bean>
 </beans>

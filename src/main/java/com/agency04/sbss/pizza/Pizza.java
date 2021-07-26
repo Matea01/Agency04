@@ -1,14 +1,8 @@
 package com.agency04.sbss.pizza;
 
-public class Pizza implements PizzaInt {
+public interface Pizza {
 
-
-    @Override
-    public String getName(){
-    return "Pizaaa";
-    }
-    @Override
-    public String getIngredients(){
-    return "sir";
-    }
+     String getName();
+     String getIngredients();
+     String getDailyPizza();
 }
