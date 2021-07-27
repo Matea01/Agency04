@@ -29,7 +29,9 @@ public class PizzaCheese implements Pizza {
     }
 
     @Override
-    public String getDailyPizza() {
-        return pizzaDeliveryService.orderPizza();
+    public String getAddress() {
+        return "adresa";
     }
+
+
 }

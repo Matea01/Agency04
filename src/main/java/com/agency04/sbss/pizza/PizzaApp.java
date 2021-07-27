@@ -11,7 +11,7 @@ public class PizzaApp {
 
         System.out.println(thePizza.getName());
         System.out.println(thePizza.getIngredients());
-        System.out.println(thePizza.getDailyPizza());
+
 
         context.close();
         // Add some pizza code

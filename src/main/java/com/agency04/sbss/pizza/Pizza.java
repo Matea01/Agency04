@@ -4,5 +4,6 @@ public interface Pizza {
 
      String getName();
      String getIngredients();
-     String getDailyPizza();
+     String getAddress();
+
 }

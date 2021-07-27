@@ -4,12 +4,12 @@ public class PizzeriaGirasole implements PizzeriaService{
 
     @Override
     public String getName(Pizza pPizza) {
-        return "Girasole";
+        return pPizza.getName();
     }
 
     @Override
     public String getAddress(Pizza pPizza) {
-        return "Kralja Zvonimira 3";
+        return pPizza.getAddress();
     }
 
     @Override
