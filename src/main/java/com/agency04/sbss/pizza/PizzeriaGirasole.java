@@ -2,18 +2,24 @@ package com.agency04.sbss.pizza;
 
 public class PizzeriaGirasole implements PizzeriaService{
 
-    @Override
-    public String getName(Pizza pPizza) {
-        return pPizza.getName();
+
+    public PizzeriaGirasole(PizzaDeliveryServiceImpl pizzaDeliveryService) {
     }
 
     @Override
-    public String getAddress(Pizza pPizza) {
-        return pPizza.getAddress();
+    public String getName(Pizza pizza) {
+        return pizza.getName();
     }
 
     @Override
-    public String makePizza(Pizza pPizza) {
-        return "daj tu picu";
+    public String getAddress(Pizza pizza) {
+        return pizza.getAddress();
     }
+
+    @Override
+    public String makePizza(Pizza pizza) {
+        return "daj tu pizzu";
+    }
+
+
 }
