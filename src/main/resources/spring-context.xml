@@ -9,10 +9,18 @@
 
     <!-- Define your Beans here -->
     <bean id="myPizzaDelivery" class="com.agency04.sbss.pizza.PizzaDeliveryServiceImpl">
-        <constructor-arg ref="myPizzaDelivery"></constructor-arg>
 
     </bean>
+
     <bean id="myPizza" class="com.agency04.sbss.pizza.PizzaCheese">
+        <constructor-arg ref="myPizzaDelivery"></constructor-arg>
     </bean>
-   
+
+
+    <bean id="myPizzaVege"
+    class="com.agency04.sbss.pizza.PizzaVege">
+    <!--set up setter injection-->
+        <property name="pizzaDeliveryService" ref="myPizzaDelivery"/>
+    </bean>
+
 </beans>
