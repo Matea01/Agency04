@@ -4,15 +4,15 @@ public class PizzeriaDalmatino implements PizzeriaService{
 
     private PizzaDeliveryService pizzaDeliveryService;
     private PizzeriaService pizzeriaService;
+    private String name="Pizzeria Dalmatino";
+    private String address="Put Supavla 1";
+
 
     public PizzeriaDalmatino(){
         System.out.println("inside no-args constructor");
-       //System.out.println(getName());
-       // System.out.println(getAddress());
     }
 
     public void setMyPizzeriaDalmatinoDelivery(PizzaDeliveryServiceImpl myPizzeriaDalmatinoDelivery) {
-        System.out.println("PizzeriaDalatino postavljena setter metodom-setPizzeriaService");
         this.pizzaDeliveryService=myPizzeriaDalmatinoDelivery;
     }
 
@@ -20,17 +20,17 @@ public class PizzeriaDalmatino implements PizzeriaService{
 
     @Override
     public String getName(Pizza pizza) {
-        return pizza.getName();
+        return name;
     }
 
     @Override
     public String getAddress(Pizza pizza) {
-        return pizza.getAddress();
+        return address;
     }
 
     @Override
     public String makePizza(Pizza pizza) {
-        return "ja ocu tu i tu picu";
+        return "U pripremi je:" + pizza.getName();
     }
 
 

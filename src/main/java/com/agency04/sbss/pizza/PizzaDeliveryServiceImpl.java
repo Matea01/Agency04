@@ -9,7 +9,7 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
     //constructor injection
     public PizzaDeliveryServiceImpl(PizzeriaGirasole pizzeriaGirasole){
-        pizzeriaGirrasole=pizzeriaGirasole;
+        this.pizzeriaGirrasole=pizzeriaGirasole;
     };
 
     //setter injection
@@ -20,8 +20,9 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
     public PizzaDeliveryServiceImpl() {
     }
 
+    //vidis da imas pristup metodama injectane klase
     @Override
-    public String orderPizza() {
-        return "Narudžba je zaprimljena gladniče.";
+    public String orderPizza(Pizza pizza) {
+        return pizzeriaGirrasole.makePizza(pizza);
     }
 }

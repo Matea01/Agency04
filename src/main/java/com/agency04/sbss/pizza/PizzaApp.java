@@ -11,8 +11,7 @@ public class PizzaApp {
         //retrieve the bean from config file
         Pizza thePizza = context.getBean("myPizza", Pizza.class);
         System.out.println(thePizza.getName());
-        System.out.println(thePizza.getIngredients());
-        System.out.println(thePizza.getAddress());
+
 
 
 
