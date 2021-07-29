@@ -11,11 +11,7 @@ public class PizzaApp {
         //retrieve the bean from config file->default bean(small first letter class name)
         PizzaDeliveryService thePizza = context.getBean("pizzaDeliveryServiceImpl", PizzaDeliveryService.class);
         System.out.println(thePizza.orderPizza(new PizzaVege()));
-
-
-
-
-
+        System.out.println(thePizza.orderPizza(new PizzaCheese()));
 
 
         context.close();

@@ -1,9 +1,14 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+
 
 @Component
 public class PizzeriaGirasole implements PizzeriaService{
+
 
     private PizzaDeliveryService pizzaDeliveryService;
     private PizzeriaService pizzeriaService;
@@ -16,7 +21,7 @@ public class PizzeriaGirasole implements PizzeriaService{
         System.out.println("inside no-args constructor");
 
     }
-
+    @Autowired
     public PizzeriaGirasole(PizzaDeliveryServiceImpl pizzaDeliveryService) {
         this.pizzaDeliveryService=pizzaDeliveryService;
     }

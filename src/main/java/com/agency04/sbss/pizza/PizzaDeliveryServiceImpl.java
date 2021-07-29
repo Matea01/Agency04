@@ -1,21 +1,27 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Component(value="pizzaDeliveryServiceImpl")
 public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
-    //dependency injection
 
+
+    @Autowired
+    //dependency injection
     private PizzeriaGirasole pizzeriaGirrasole;//constructor njection
     private PizzeriaDalmatino pizzeriaDallmatino;//setter injection
 
+
+
     //constructor injection
     public PizzaDeliveryServiceImpl(PizzeriaGirasole pizzeriaGirasole){
+
         this.pizzeriaGirrasole=pizzeriaGirasole;
     };
-
-    //setter injection
     public void setPizzeriaDalmatino(PizzeriaDalmatino pizzeriaDalmatino){
         this.pizzeriaDallmatino=pizzeriaDalmatino;
     };
@@ -26,6 +32,6 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
     //vidis da imas pristup metodama injectane klase
     @Override
     public String orderPizza(Pizza pizza) {
-        return "aaaaaaaaaaaaaaaaaaaaaaa";
+        return "Naručili ste pizzu "+ pizza.getName();
     }
 }
