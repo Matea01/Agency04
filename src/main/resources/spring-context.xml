@@ -8,33 +8,8 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your Beans here -->
-    <!--constructor injection-->
-    <bean id="myPizzaDelivery" class="com.agency04.sbss.pizza.PizzaDeliveryServiceImpl"></bean>
-
-    <bean id="myPizza" class="com.agency04.sbss.pizza.PizzaCheese">
-        <constructor-arg ref="myPizzaDelivery"></constructor-arg>
-    </bean>
-
-    <!--PizzeriaGirasole preko constructor injection kao i Cheese-->
-
-    <bean id="myPizzeriaGirasoleDelivery" class="com.agency04.sbss.pizza.PizzaDeliveryServiceImpl"></bean>
-    <bean id="pizzeriaGirasole" class="com.agency04.sbss.pizza.PizzeriaGirasole">
-        <constructor-arg ref="myPizzeriaGirasoleDelivery"></constructor-arg>
-    </bean>
-
-    <!--setter injection-->
-    <bean id="myPizzaVege"
-    class="com.agency04.sbss.pizza.PizzaVege">
-    <!--set up setter injection-->
-        <property name="pizzaDeliveryService" ref="myPizzaDelivery"/>
-    </bean>
-
-
-    <!--PizzeriaDAlmatino preko setter injection kao i vege-->
-    <bean id="myPizzeriaDalmatinoDelivery" class="com.agency04.sbss.pizza.PizzeriaDalmatino">
-        <!--set up setter injection-->
-        <property name="myPizzeriaDalmatinoDelivery" ref="myPizzaDelivery"/>
-    </bean>
+    <!--add entry to enable component scaning -->
+    <context:component-scan base-package="com.agency04.sbss.pizza"/>
 
 
 </beans>

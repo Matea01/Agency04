@@ -1,5 +1,8 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
     //dependency injection
@@ -23,6 +26,6 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
     //vidis da imas pristup metodama injectane klase
     @Override
     public String orderPizza(Pizza pizza) {
-        return pizzeriaGirrasole.makePizza(pizza);
+        return "aaaaaaaaaaaaaaaaaaaaaaa";
     }
 }

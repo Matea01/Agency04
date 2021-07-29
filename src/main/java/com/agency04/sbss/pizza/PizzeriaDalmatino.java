@@ -1,9 +1,13 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.stereotype.Component;
+
 public class PizzeriaDalmatino implements PizzeriaService{
 
     private PizzaDeliveryService pizzaDeliveryService;
     private PizzeriaService pizzeriaService;
+
+
     private String name="Pizzeria Dalmatino";
     private String address="Put Supavla 1";
 

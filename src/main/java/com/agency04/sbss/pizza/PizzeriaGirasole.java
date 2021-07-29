@@ -1,9 +1,13 @@
 package com.agency04.sbss.pizza;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PizzeriaGirasole implements PizzeriaService{
 
     private PizzaDeliveryService pizzaDeliveryService;
     private PizzeriaService pizzeriaService;
+
     private String name="Pizzeria Girasole";
     private String address="Kralja Zvonimira 3";
 
@@ -14,6 +18,7 @@ public class PizzeriaGirasole implements PizzeriaService{
     }
 
     public PizzeriaGirasole(PizzaDeliveryServiceImpl pizzaDeliveryService) {
+        this.pizzaDeliveryService=pizzaDeliveryService;
     }
 
     @Override

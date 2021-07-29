@@ -8,26 +8,17 @@ public class PizzaApp {
 
         //load the spring configuration#1
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
-        //retrieve the bean from config file
-        Pizza thePizza = context.getBean("myPizza", Pizza.class);
-        System.out.println(thePizza.getName());
+        //retrieve the bean from config file->default bean(small first letter class name)
+        PizzaDeliveryService thePizza = context.getBean("pizzaDeliveryServiceImpl", PizzaDeliveryService.class);
+        System.out.println(thePizza.orderPizza(new PizzaVege()));
+
+
 
 
 
 
 
         context.close();
-
-        //load the spring configuration#2
-        //ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext("spring-context.xml");
-        //retrieve the bean from config file
-        //Pizza thePizzaVege = context1.getBean("myPizzaVege", Pizza.class);
-
-        //call the mthods on the bean
-
-        //close context
-       // context1.close();
-
         // Add some pizza code
 
     }
