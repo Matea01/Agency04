@@ -11,14 +11,14 @@ public class PizzeriaGirasole implements PizzeriaService{
 
 
     private PizzaDeliveryService pizzaDeliveryService;
-    private PizzeriaService pizzeriaService;
+
 
     private String name="Pizzeria Girasole";
     private String address="Kralja Zvonimira 3";
 
 
     public PizzeriaGirasole(){
-        System.out.println("inside no-args constructor");
+        System.out.println("inside no-args constructor of Dalmatino");
 
     }
     @Autowired
@@ -27,12 +27,12 @@ public class PizzeriaGirasole implements PizzeriaService{
     }
 
     @Override
-    public String getName(Pizza pizza) {
+    public String getName() {
         return name;
     }
 
     @Override
-    public String getAddress(Pizza pizza) {
+    public String getAddress() {
         return address;
     }
 

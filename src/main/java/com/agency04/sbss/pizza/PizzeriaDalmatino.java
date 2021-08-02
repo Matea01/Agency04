@@ -7,10 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class PizzeriaDalmatino implements PizzeriaService{
 
-    @Autowired
-    @Qualifier("pizzaDeliveryServiceImpl")
+
+
     private PizzaDeliveryService pizzaDeliveryService;
-    private PizzeriaService pizzeriaService;
+
+
 
 
     private String name="Pizzeria Dalmatino";
@@ -18,7 +19,7 @@ public class PizzeriaDalmatino implements PizzeriaService{
 
 
     public PizzeriaDalmatino(){
-        System.out.println("inside no-args constructor");
+        System.out.println("inside no-args constructor of Dalmatino");
     }
 
     public void setMyPizzeriaDalmatinoDelivery(PizzaDeliveryServiceImpl myPizzeriaDalmatinoDelivery) {
@@ -28,12 +29,12 @@ public class PizzeriaDalmatino implements PizzeriaService{
 
 
     @Override
-    public String getName(Pizza pizza) {
+    public String getName() {
         return name;
     }
 
     @Override
-    public String getAddress(Pizza pizza) {
+    public String getAddress() {
         return address;
     }
 

@@ -11,22 +11,20 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
 
     @Autowired
-    //dependency injection
+    @Qualifier("pizzeriaDalmatino") private PizzeriaService pizzeriaService;
+    
     private PizzeriaGirasole pizzeriaGirrasole;//constructor njection
     private PizzeriaDalmatino pizzeriaDallmatino;//setter injection
 
 
-
-    //constructor injection
-    public PizzaDeliveryServiceImpl(PizzeriaGirasole pizzeriaGirasole){
-
-        this.pizzeriaGirrasole=pizzeriaGirasole;
-    };
-    public void setPizzeriaDalmatino(PizzeriaDalmatino pizzeriaDalmatino){
-        this.pizzeriaDallmatino=pizzeriaDalmatino;
-    };
-
-    public PizzaDeliveryServiceImpl() {
+    @PostConstruct
+    public void DoMyStartUpStuff()
+    {
+        System.out.println("inside DoMyStartUpStuff");
+    }
+    public void DoMyCleadnUp()
+    {
+        System.out.print("Inside DoMyCleanUp");
     }
 
     //vidis da imas pristup metodama injectane klase
