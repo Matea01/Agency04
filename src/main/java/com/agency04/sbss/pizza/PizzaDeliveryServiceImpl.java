@@ -12,10 +12,8 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
     @Autowired
     @Qualifier("pizzeriaDalmatino") private PizzeriaService pizzeriaService;
-    
-    private PizzeriaGirasole pizzeriaGirrasole;//constructor njection
-    private PizzeriaDalmatino pizzeriaDallmatino;//setter injection
 
+    
 
     @PostConstruct
     public void DoMyStartUpStuff()
