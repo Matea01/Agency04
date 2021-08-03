@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component(value="pizzaDeliveryServiceImpl")
 public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
@@ -12,16 +15,16 @@ public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
     @Qualifier("pizzeriaDalmatino") private PizzeriaService pizzeriaService;
 
 
-    //@PostConstruct
-    //public void DoMyStartUpStuff()
-    //{
-      //  System.out.println("inside DoMyStartUpStuff");
-    //}
-    //@PreDestroy
-    //public void DoMyCleadnUp()
-    //{
-       // System.out.print("Inside DoMyCleanUp");
-    //}
+    @PostConstruct
+    public void DoMyStartUpStuff()
+    {
+       System.out.println("inside DoMyStartUpStuff");
+    }
+    @PreDestroy
+    public void DoMyCleadnUp()
+    {
+        System.out.print("Inside DoMyCleanUp");
+    }
 
     @Override
     public String orderPizza(Pizza pizza) {

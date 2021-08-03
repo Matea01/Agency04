@@ -1,6 +1,7 @@
 package com.agency04.sbss.pizza;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class PizzaApp {
@@ -8,7 +9,7 @@ public class PizzaApp {
     public static void main(String[] args) {
 
         //load the spring configuration#1
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PizzaConfig.class);
         //retrieve the bean from config file->default bean(small first letter class name)
         PizzaDeliveryService thePizza = context.getBean("pizzaDeliveryServiceImpl", PizzaDeliveryService.class);
 
