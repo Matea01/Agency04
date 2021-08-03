@@ -8,24 +8,21 @@ import org.springframework.stereotype.Service;
 @Component(value="pizzaDeliveryServiceImpl")
 public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
-
-
-    @Autowired
+    @Autowired//znaci cim se kreira PizzaDelImpl bean da ce se pozvati njen konstruktor
     @Qualifier("pizzeriaDalmatino") private PizzeriaService pizzeriaService;
 
-    
 
-    @PostConstruct
-    public void DoMyStartUpStuff()
-    {
-        System.out.println("inside DoMyStartUpStuff");
-    }
-    public void DoMyCleadnUp()
-    {
-        System.out.print("Inside DoMyCleanUp");
-    }
+    //@PostConstruct
+    //public void DoMyStartUpStuff()
+    //{
+      //  System.out.println("inside DoMyStartUpStuff");
+    //}
+    //@PreDestroy
+    //public void DoMyCleadnUp()
+    //{
+       // System.out.print("Inside DoMyCleanUp");
+    //}
 
-    //vidis da imas pristup metodama injectane klase
     @Override
     public String orderPizza(Pizza pizza) {
         return "Naručili ste pizzu "+ pizza.getName();

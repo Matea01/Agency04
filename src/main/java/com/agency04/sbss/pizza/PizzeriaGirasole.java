@@ -6,11 +6,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 
-@Component
+@Component(value="pizzeriaGirasole")
 public class PizzeriaGirasole implements PizzeriaService{
-
-
-    private PizzaDeliveryService pizzaDeliveryService;
 
 
     private String name="Pizzeria Girasole";
@@ -20,10 +17,6 @@ public class PizzeriaGirasole implements PizzeriaService{
     public PizzeriaGirasole(){
         System.out.println("inside no-args constructor of Dalmatino");
 
-    }
-    @Autowired
-    public PizzeriaGirasole(PizzaDeliveryServiceImpl pizzaDeliveryService) {
-        this.pizzaDeliveryService=pizzaDeliveryService;
     }
 
     @Override
@@ -38,7 +31,7 @@ public class PizzeriaGirasole implements PizzeriaService{
 
     @Override
     public String makePizza(Pizza pizza) {
-        return "U pripremi je" +pizza.getName();
+         return getName()+"priprema pizzu"+pizza.getName();
     }
 
 

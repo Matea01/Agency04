@@ -2,30 +2,25 @@ package com.agency04.sbss.pizza;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value="pizzeriaDalmatino")
+@PropertySource("classpath:application.properties")
 public class PizzeriaDalmatino implements PizzeriaService{
 
 
 
-    private PizzaDeliveryService pizzaDeliveryService;
-
-
-
-
-    private String name="Pizzeria Dalmatino";
-    private String address="Put Supavla 1";
+    @Value("$dalmatino.name")
+    private String name;
+    @Value("$dalmatino.adress")
+    private String address;
 
 
     public PizzeriaDalmatino(){
         System.out.println("inside no-args constructor of Dalmatino");
     }
-
-    public void setMyPizzeriaDalmatinoDelivery(PizzaDeliveryServiceImpl myPizzeriaDalmatinoDelivery) {
-        this.pizzaDeliveryService=myPizzeriaDalmatinoDelivery;
-    }
-
 
 
     @Override
@@ -40,7 +35,7 @@ public class PizzeriaDalmatino implements PizzeriaService{
 
     @Override
     public String makePizza(Pizza pizza) {
-        return "U pripremi je:" + pizza.getName();
+        return getName()+"priprema pizzu"+pizza.getName();
     }
 
 
