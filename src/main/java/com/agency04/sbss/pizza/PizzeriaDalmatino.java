@@ -18,7 +18,7 @@ public class PizzeriaDalmatino implements PizzeriaService{
     private String address;
 
 
-    public PizzeriaDalmatino(PizzaDeliveryService delService){
+    public PizzeriaDalmatino(){
         System.out.println("inside no-args constructor of Dalmatino");
     }
 

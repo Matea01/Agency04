@@ -11,8 +11,8 @@ import javax.annotation.PreDestroy;
 @Component(value="pizzaDeliveryServiceImpl")
 public class PizzaDeliveryServiceImpl implements PizzaDeliveryService{
 
-    @Autowired//znaci cim se kreira PizzaDelImpl bean da ce se pozvati njen konstruktor
-    @Qualifier("pizzeriaDalmatino") private PizzeriaService pizzeriaService;
+    @Autowired
+    private PizzeriaService pizzeriaService;
 
 
     @PostConstruct

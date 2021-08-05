@@ -11,17 +11,15 @@ public class PizzaConfig {
 
     private PizzaDeliveryService delService;
 
-    //bean za servis
     @Bean
-    public PizzaDeliveryService delService(){ //interface
+    public PizzaDeliveryServiceImpl delService(){ //interface
         return new PizzaDeliveryServiceImpl();//klasa
 
     }
-    //bean za klasu i injection
     @Bean
     @Primary
-    public Pizza PizzeriaDalmatino(){
-        return (Pizza) new PizzeriaDalmatino(delService);
+    public PizzeriaDalmatino PizzeriaDalmatino(){
+        return  new PizzeriaDalmatino();
         }
     
 
