@@ -1,9 +1,6 @@
 package com.agency04.sbss.pizza;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan("com.agency04.sbss.pizza")
@@ -18,6 +15,7 @@ public class PizzaConfig {
     }
     @Bean
     @Primary
+    @PropertySource("classpath:application.properties")
     public PizzeriaDalmatino PizzeriaDalmatino(){
         return  new PizzeriaDalmatino();
         }

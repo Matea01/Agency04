@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Component(value="pizzeriaDalmatino")
-@PropertySource("classpath:application.properties")
+
+
 public class PizzeriaDalmatino implements PizzeriaService{
 
 
