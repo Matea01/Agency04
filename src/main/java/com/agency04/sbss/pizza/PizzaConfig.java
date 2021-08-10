@@ -4,6 +4,7 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan("com.agency04.sbss.pizza")
+@PropertySource({})
 public class PizzaConfig {
 
     private PizzaDeliveryService delService;
@@ -15,8 +16,7 @@ public class PizzaConfig {
     }
     @Bean
     @Primary
-    @PropertySource("classpath:application.properties")
-    public PizzeriaDalmatino PizzeriaDalmatino(){
+    public PizzeriaDalmatino pizzeriaDalmatino(){
         return  new PizzeriaDalmatino();
         }
     

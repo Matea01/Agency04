@@ -1,9 +1,10 @@
 package com.agency04.sbss.pizza;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
+@SpringBootApplication
 public class PizzaApp {
 
     public static void main(String[] args) {
